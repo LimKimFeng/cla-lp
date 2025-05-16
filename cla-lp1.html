@@ -1,0 +1,1312 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Design Cheatcode Webinar | Coach Ridzky Ramadhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a2342;
+            --gold: #d4af37;
+            --gold-light: #e5c76b;
+            --gold-dark: #b38728;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--navy);
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background-color: var(--gold);
+            margin: 0 auto 40px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--navy);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: #fff;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(10, 35, 66, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f8f9fa;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid var(--gold);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-text {
+            flex: 2;
+            padding-left: 40px;
+        }
+
+        .about-text h3 {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Materials Section */
+        .materials {
+            background-color: var(--navy);
+            color: white;
+        }
+
+        .materials h2 {
+            color: white;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .material-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .material-icon {
+            background-color: rgba(212, 175, 55, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .material-text h3 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .material-text p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--navy);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .testimonial-author h4 {
+            margin-bottom: 0;
+        }
+
+        .testimonial-author p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: #f8f9fa;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--navy);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-answer {
+            background-color: white;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .faq-answer.active {
+            max-height: 300px;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.active {
+            transform: rotate(180deg);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background-color: var(--navy);
+            color: white;
+        }
+
+        .pricing h2 {
+            color: white;
+        }
+
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-header {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pricing-title h3 {
+            margin-bottom: 5px;
+        }
+
+        .pricing-title p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .pricing-original {
+            text-align: right;
+        }
+
+        .pricing-original .price-tag {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .pricing-original .discount-tag {
+            background-color: #ffebee;
+            color: #f44336;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .pricing-amount {
+            background-color: #f8f9fa;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .current-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .limited-offer {
+            color: #f44336;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .pricing-features {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-list h4 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .feature-icon {
+            color: var(--gold);
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .pricing-footer {
+            background-color: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .pricing-footer p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            color: var(--navy);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--gold);
+        }
+
+        .contact-icon {
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a1a2f;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-info {
+            max-width: 300px;
+        }
+
+        .footer-info h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-info p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links h4 {
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-icon {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
+        /* Registration Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .modal-header h3 {
+            margin-bottom: 0;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+
+            .hero-content,
+            .about-content {
+                flex-direction: column;
+            }
+
+            .hero-text,
+            .about-text {
+                padding-right: 0;
+                padding-left: 0;
+                margin-bottom: 40px;
+            }
+
+            .pricing-features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .footer-info {
+                margin-bottom: 30px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .pricing-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pricing-original {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            .pricing-amount {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .limited-offer {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in active">
+                    <h1><span>AI DESIGN CHEATCODE:</span> Cara Cepat Dapat Income Ratusan Dolar dengan Desain Pakai AI!
+                    </h1>
+                    <p>Webinar 2 jam yang akan mengubah cara Anda melihat dunia desain dan freelance.</p>
+                    <a href="#daftar" class="btn">Daftar Sekarang dengan Diskon Terbatas!</a>
+                </div>
+                <div class="hero-image fade-in active">
+                    <img style="width: 100%; max-width: 700px; @media (max-width: 768px) {img {max-width: 400px;" src="Cuan16.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="text-center fade-in active">
+                <h2 class="section-title">Kenapa Harus Ikut Webinar Ini?</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card fade-in active">
+                    <div class="icon-container">
+                        💡
+                    </div>
+                    <h3>Praktis</h3>
+                    <p>Hanya butuh 2 jam untuk belajar dan langsung bisa dipraktikkan.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card fade-in active">
+                    <div class="icon-container">
+                        💰
+                    </div>
+                    <h3>Income Ratusan Dolar</h3>
+                    <p>Peluang mendapatkan job dari luar negeri dengan bayaran tinggi.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card fade-in active">
+                    <div class="icon-container">
+                        🚀
+                    </div>
+                    <h3>Mudah Dipraktikkan</h3>
+                    <p>Tidak perlu skill desain, semua bisa dipelajari dari awal.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card fade-in active">
+                    <div class="icon-container">
+                        🌐
+                    </div>
+                    <h3>Client Internasional</h3>
+                    <p>Dapat job dari seluruh dunia tanpa batasan geografis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in active">
+                    <div class="flex justify-center">
+                        <img src="gmabr ridzky transparan.webp" alt="">
+                    </div>
+                </div>
+                <div class="about-text fade-in active">
+                    <h2 class="section-title">Tentang Pengajar</h2>
+                    <h3>Coach Ridzky Ramadhan</h3>
+                    <p>Designpreneur &amp; AI Design Expert, mengajarkan blueprint 6 Pillar untuk sukses di dunia desain
+                        AI.</p>
+                    <div
+                        style="background-color: rgba(10, 35, 66, 0.05); padding: 20px; border-radius: 10px; border-left: 4px solid #d4af37; margin-bottom: 20px;">
+                        <p style="font-style: italic; margin-bottom: 0;">
+                            "Saya telah membantu ratusan orang tanpa background desain untuk mendapatkan income dari
+                            skill AI Design. Metode yang saya ajarkan telah terbukti berhasil dan dapat diikuti oleh
+                            siapa saja."
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span
+                            style="background-color: white; padding: 8px 16px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; align-items: center;">
+                            <span style="color: #d4af37; margin-right: 8px;">✓</span>
+                            <span>5+ Tahun Pengalaman</span>
+                        </span>
+                        <span
+                            style="background-color: white; padding: 8px 16px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; align-items: center;">
+                            <span style="color: #d4af37; margin-right: 8px;">✓</span>
+                            <span>500+ Murid Sukses</span>
+                        </span>
+                        <span
+                            style="background-color: white; padding: 8px 16px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; align-items: center;">
+                            <span style="color: #d4af37; margin-right: 8px;">✓</span>
+                            <span>AI Design Specialist</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="materials" id="materials">
+        <div class="container">
+            <div class="text-center fade-in active">
+                <h2 class="section-title">Materi Webinar</h2>
+                <p class="section-subtitle" style="color: #d4af37;">Yang akan Anda pelajari dalam 2 jam</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="materials-grid mb-6">
+                <!-- Material 1 -->
+                <div class="material-card fade-in active">
+                    <div class="material-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                fill="#d4af37"></path>
+                        </svg>
+                    </div>
+                    <div class="material-text">
+                        <h3>Cheatcode AI untuk Desain</h3>
+                        <p>Pelajari cara memanfaatkan teknologi AI terbaru untuk menghasilkan desain profesional tanpa
+                            perlu skill desain tradisional.</p>
+                    </div>
+                </div>
+
+                <!-- Material 2 -->
+                <div class="material-card fade-in active">
+                    <div class="material-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"
+                                fill="#d4af37"></path>
+                        </svg>
+                    </div>
+                    <div class="material-text">
+                        <h3>Cara Dapat Client Internasional</h3>
+                        <p>Strategi praktis untuk mendapatkan klien dari luar negeri dan membangun portofolio yang
+                            menarik perhatian.</p>
+                    </div>
+                </div>
+
+                <!-- Material 3 -->
+                <div class="material-card fade-in active">
+                    <div class="material-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z"
+                                fill="#d4af37"></path>
+                        </svg>
+                    </div>
+                    <div class="material-text">
+                        <h3>Formula 6 Pillar untuk Sukses</h3>
+                        <p>Blueprint lengkap 6 Pillar yang akan membawa Anda menuju kesuksesan dalam dunia desain AI
+                            dalam waktu singkat.</p>
+                    </div>
+                </div>
+
+                <!-- Material 4 -->
+                <div class="material-card fade-in active">
+                    <div class="material-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H8V4H20V16ZM10 9H18V11H10V9ZM10 12H14V14H10V12ZM10 6H18V8H10V6Z"
+                                fill="#d4af37"></path>
+                        </svg>
+                    </div>
+                    <div class="material-text">
+                        <h3>Studi Kasus dari Praktisi</h3>
+                        <p>Contoh nyata dari para praktisi yang telah berhasil menerapkan metode ini dan mendapatkan
+                            income ratusan dolar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 fade-in active">
+                <a href="#daftar" class="btn">Daftar Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="text-center fade-in active">
+                <h2 class="section-title">Testimoni Peserta</h2>
+                <p class="section-subtitle">Apa kata mereka yang sudah mengikuti webinar ini</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in active">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AR</div>
+                        <div class="testimonial-author">
+                            <h4>Andi Rahmat</h4>
+                            <p>Freelancer</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-text">
+                        "Saya tidak punya background desain sama sekali, tapi setelah mengikuti webinar ini, saya
+                        berhasil mendapatkan client pertama saya dari Upwork dengan bayaran $150 untuk project pertama!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in active">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">DS</div>
+                        <div class="testimonial-author">
+                            <h4>Dina Sari</h4>
+                            <p>Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-text">
+                        "Sebagai ibu rumah tangga, saya bisa mengerjakan project desain dari rumah. Dalam sebulan
+                        pertama, saya sudah mendapatkan 3 client tetap dengan total penghasilan $350."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in active">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">BP</div>
+                        <div class="testimonial-author">
+                            <h4>Budi Pratama</h4>
+                            <p>Mahasiswa</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-text">
+                        "Formula 6 Pillar yang diajarkan sangat mudah diikuti. Saya masih kuliah tapi sudah bisa
+                        menghasilkan $200-300 per bulan dari freelance desain AI. Investasi terbaik!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="text-center fade-in active">
+                <h2 class="section-title">Pertanyaan yang Sering Ditanyakan</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item fade-in active">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Apakah pemula bisa ikut?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Tentu saja! Webinar ini dirancang khusus untuk pemula yang tidak memiliki background desain.
+                            Semua materi akan dijelaskan dari dasar dengan langkah-langkah yang mudah diikuti. Anda
+                            hanya perlu memiliki komputer/laptop dan koneksi internet.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item fade-in active">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Apakah pasti dapat job setelah ikut webinar?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Hasil setiap orang akan berbeda-beda tergantung pada konsistensi dan implementasi. Namun,
+                            kami memberikan blueprint lengkap dan strategi yang telah terbukti berhasil untuk ratusan
+                            peserta sebelumnya. Dengan mengikuti semua langkah yang diajarkan, peluang Anda untuk
+                            mendapatkan job sangat tinggi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item fade-in active">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Bagaimana cara kerjanya?</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Setelah mendaftar, Anda akan menerima link webinar dan materi pendukung. Webinar berlangsung
+                            selama 2 jam dengan sesi tanya jawab. Anda akan belajar cara menggunakan AI untuk membuat
+                            desain profesional, strategi mendapatkan client internasional, dan formula 6 Pillar untuk
+                            sukses. Setelah webinar, Anda bisa langsung mempraktikkan ilmu yang didapat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="daftar">
+        <div class="container">
+            <div class="text-center fade-in active">
+                <h2 class="section-title">Daftar Sekarang</h2>
+                <p style="color: #d4af37; font-size: 18px; margin-bottom: 20px;">Investasi untuk masa depan Anda</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="pricing-card fade-in active">
+                <div class="pricing-header">
+                    <div class="pricing-title">
+                        <h3>AI Design Cheatcode Webinar</h3>
+                        <p>Dengan Coach Ridzky Ramadhan</p>
+                    </div>
+                    <div class="pricing-original">
+                        <div class="price-tag">Harga Normal: Rp 350.000</div>
+                        <div class="discount-tag">Diskon Early Bird</div>
+                    </div>
+                </div>
+
+                <div class="pricing-amount">
+                    <div>
+                        <div class="current-price">Rp 125.000</div>
+                        <p class="limited-offer">Hanya untuk 25 pendaftar pertama!</p>
+                    </div>
+                    <button id="registerBtn" class="btn">
+                        Daftar Sekarang
+                    </button>
+                </div>
+
+                <div style="color: #0a1a2f;" class="pricing-features">
+                    <div class="feature-list">
+                        <h4>Yang Anda Dapatkan:</h4>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Akses webinar live 2 jam</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Materi dan slide presentasi</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Rekaman webinar</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Sesi tanya jawab</span>
+                        </div>
+                    </div>
+                    <div class="feature-list">
+                        <h4>Bonus Spesial:</h4>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Template portofolio AI Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Akses grup komunitas eksklusif</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>E-book "AI Design Cheatsheet"</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Konsultasi gratis 15 menit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="pricing-footer">
+                    <p>Masih ragu? Hubungi kami untuk informasi lebih lanjut</p>
+                    <div class="contact-links">
+                        <a href="https://wa.me/6281234567890" class="contact-link">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z" fill="currentColor"></path>
+                                </svg>
+                            </span>
+                            WhatsApp
+                        </a>
+                        <a href="mailto:info@starionschool.com" class="contact-link">
+                            <span class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"></path>
+                                </svg>
+                            </span>
+                            Email
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="text-center" style="margin-top: 20px; color: rgba(255, 255, 255, 0.6); font-size: 14px;">
+                <p>* Harga promo berlaku untuk waktu terbatas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Formulir Pendaftaran</h3>
+                <button id="closeModal" class="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Nomor WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" required="">
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Lanjutkan ke Pembayaran</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Starion School</h3>
+                    <p>Platform edukasi yang fokus pada pengembangan skill digital dan AI untuk masa depan.</p>
+                </div>
+
+                <!-- <div class="footer-links">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>
+                            <a href="mailto:info@starionschool.com">
+                                <span class="footer-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                info@starionschool.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/6281234567890">
+                                <span class="footer-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                +62 812-3456-7890
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/starionschool">
+                                <span class="footer-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                @starionschool
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2023 Starion School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        function checkFadeElements() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight - 100 && elementBottom > 0) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const arrow = element.querySelector('.arrow');
+
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                arrow.classList.remove('active');
+            } else {
+                answer.classList.add('active');
+                arrow.classList.add('active');
+            }
+        }
+
+        // Modal
+        const modal = document.getElementById('registrationModal');
+        const registerBtn = document.getElementById('registerBtn');
+        const closeModal = document.getElementById('closeModal');
+
+        registerBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Terima kasih telah mendaftar! Kami akan menghubungi Anda segera untuk informasi pembayaran.');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        });
+
+        // Initialize
+        window.addEventListener('scroll', checkFadeElements);
+        window.addEventListener('load', checkFadeElements);
+
+        // Initial check
+        checkFadeElements();
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'940bd50d658dac9d',t:'MTc0NzQwODU0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+    <iframe height="1" width="1"
+        style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
+</body>
